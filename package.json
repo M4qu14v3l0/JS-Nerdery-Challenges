@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:match": "jest -i JS-Algorithms/challenges.test.js -t"
   },
   "devDependencies": {
     "eslint": "^7.21.0",
