@@ -6,7 +6,8 @@
   "author": "AlexxMart <alex@ravn.co>",
   "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint"
   },
   "devDependencies": {
     "eslint": "^7.21.0",
