@@ -50,10 +50,16 @@ Example:
 Invoking "circularArray(2)" should return "["Island", "Japan", "Israel", "Germany", "Norway"]"
 ***** */
 
-const COUNTRY_NAMES = ["Germany", "Norway", "Island", "Japan", "Israel"];
+const COUNTRY_NAMES = ['Germany', 'Norway', 'Island', 'Japan', 'Israel'];
 
 const circularArray = (index) => {
   // YOUR CODE HERE...
+  const circularIndex = index % COUNTRY_NAMES.length;
+  const sortedArray = [
+    ...COUNTRY_NAMES.slice(circularIndex),
+    ...COUNTRY_NAMES.slice(0, circularIndex),
+  ];
+  return sortedArray;
 };
 
 circularArray(2);
