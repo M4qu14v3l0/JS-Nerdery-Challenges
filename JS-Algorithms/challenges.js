@@ -99,7 +99,10 @@ const ownPower = (number, lastDigits) => {
     }
     accumulator = (accumulator + power) % module;
   }
-  const selectDigits = accumulator.toString().padStart(lastDigits, '0');
+  const selectDigits = accumulator
+    .toString()
+    .padStart(lastDigits, '0');
+
   return selectDigits;
 };
 
