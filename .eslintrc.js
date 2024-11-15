@@ -13,5 +13,7 @@ module.exports = {
     indent: ['error', 2],
     'no-tabs': 0,
     'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
+    'linebreak-style': 0,
+    semi: ['error', 'always'],
   },
 };
