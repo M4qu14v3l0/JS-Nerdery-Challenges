@@ -11,5 +11,7 @@ module.exports = {
   },
   rules: {
     indent: ['error', 2],
+    'no-tabs': 0,
+    'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
   },
 };
