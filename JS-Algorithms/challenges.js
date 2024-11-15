@@ -126,6 +126,17 @@ Since 10! === 3628800 and you sum 3 + 6 + 2 + 8 + 8 + 0 + 0
 
 const digitSum = (n) => {
   // YOUR CODE HERE...
+  let accumulator = BigInt(1);
+  for (let x = 1; x <= n; x++) {
+    accumulator *= BigInt(x);
+  }
+
+  const sum = accumulator
+    .toString()
+    .split('')
+    .reduce((acc, char) => acc + parseInt(char, 10), 0);
+
+  return sum;
 };
 
 digitSum(10);
