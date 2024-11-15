@@ -88,7 +88,19 @@ The last 3 digits for the sum of powers from 1 to 10 is "317"
 ***** */
 
 const ownPower = (number, lastDigits) => {
-  // YOUR CODE HERE...
+  // module prevents high values because of exponents
+  const module = 10 ** lastDigits;
+  let accumulator = 0;
+
+  for (let x = 1; x <= number; x++) {
+    let power = 1;
+    for (let y = 0; y < x; y++) {
+      power = (power * x) % module;
+    }
+    accumulator = (accumulator + power) % module;
+  }
+  const selectDigits = accumulator.toString().padStart(lastDigits, '0');
+  return selectDigits;
 };
 
 ownPower(10, 3);
