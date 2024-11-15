@@ -23,6 +23,7 @@ const readableTime = (seconds) => {
     getHours.toString().padStart(2, '0') + ':' +
     getMinutes.toString().padStart(2, '0') + ':' +
     getSeconds.toString().padStart(2, '0');
+  /* eslint-enable */
 
   return timeString;
 };
